@@ -114,6 +114,13 @@ body {
   line-height: 1.5;
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :focus-visible {
   outline-color: var(--primary-variant);
 }
