@@ -4,6 +4,11 @@ import { imageBaseURL, api_key, fetchDataFromServer } from "./api.js";
 
 export const sidebar = () => {
   //Función que se ejecuta al cargar la página
+
+  /**
+   * Obtiene todos los géneros ejemplo: [ {id: 28, name: "Acción"}, {id: 12, name: "Aventura"}, ...]
+   * entonces cambiamos el array a un objeto con la siguiente estructura: {28: "Acción", 12: "Aventura", ...}
+   */
   const genreList = {};
 
   fetchDataFromServer(
