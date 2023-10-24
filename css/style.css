@@ -116,9 +116,16 @@ body {
 
 @font-face {
   font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  src: url("../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
 }
 
 :focus-visible {
