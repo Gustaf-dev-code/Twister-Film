@@ -29,6 +29,7 @@
   --surface: rgb(59, 3, 104);
   --text-color: rgb(2, 255, 234);
   --white: hsla(0, 0%, 100%, 1);
+  --grey: rgba(255, 255, 255, 0.705);
 
   /*** FONT ***/
   --font-family: "Poppins", sans-serif;
@@ -615,7 +616,7 @@ body {
           right: 24px;
           bottom: 206px;
           z-index: 1;
-          color: var(--text-color);
+          color: var(--grey);
 
           & :is(.heading, .banner-text) {
             display: -webkit-box;
