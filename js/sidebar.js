@@ -69,6 +69,7 @@ export const sidebar = () => {
 
       <img
         src="./assets/images/tmdb-logo.svg"
+        onerror="this.src='../assets/images/tmdb-logo.png'"
         width="130"
         alt="Logo de api de la pelicula"
       />

@@ -64,7 +64,7 @@ fetchDataFromServer(
     });
 
     fetchDataFromServer(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=es-ES&page=1`,
+      `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=es-ES&page=2`,
       heroBanner
     );
   }
@@ -124,7 +124,7 @@ const heroBanner = ({ results: movieList }) => {
 
               <p class="banner-text">${overview}</p>
 
-              <a href="./pages/detail.html" class="btn">
+              <a href="./pages/detail.html" class="btn" onclick="getMovieDetail(${id})" >
                 <img
                   src="./assets/images/play_circle.png"
                   width="24"
