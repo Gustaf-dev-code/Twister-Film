@@ -10,6 +10,8 @@ import { imageBaseURL, api_key, fetchDataFromServer } from "./api.js";
 
 import { createMovieCard } from "./movie-card.js";
 
+import { search } from "./search.js";
+
 const pageContent = document.querySelector("[page-content]"); //Selecciona el div con el atributo page-content
 
 sidebar();
@@ -124,7 +126,7 @@ const heroBanner = ({ results: movieList }) => {
 
               <p class="banner-text">${overview}</p>
 
-              <a href="./pages/detail.html" class="btn" onclick="getMovieDetail(${id})" >
+              <a href="./detail.html" class="btn" onclick="getMovieDetail(${id})" >
                 <img
                   src="./assets/images/play_circle.png"
                   width="24"
@@ -226,3 +228,5 @@ const createMovieList = ({ results: movieList }, title) => {
 
   pageContent.appendChild(movieListElem); //Agrega el movie-list al page-content
 };
+
+search();

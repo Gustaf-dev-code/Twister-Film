@@ -27,36 +27,18 @@ export const sidebar = () => {
   sidebarInner.classList.add("sidebar-inner"); //Crea un div con la clase sidebar-inner
   sidebarInner.innerHTML = `
     <div class="sidebar-list">
-      <p class="title">Género</p>
-      <a href="./pages/movie-list.html" class="sidebar-link" menu-close
-        >Acción</a
-      >
-      <a href="./pages/movie-list.html" class="sidebar-link" menu-close
-        >Terror</a
-      >
-      <a href="./pages/movie-list.html" class="sidebar-link" menu-close
-        >Comedia</a
-      >
-      <a href="./pages/movie-list.html" class="sidebar-link" menu-close
-        >Aventura</a
-      >
-      <a href="./pages/movie-list.html" class="sidebar-link" menu-close
-        >Drama</a
-      >
-      <a href="./pages/movie-list.html" class="sidebar-link" menu-close
-        >Ciencia ficción</a
-      >
+      <p class="title">Género</p>      
     </div>
 
     <div class="sidebar-list">
       <p class="title">Lenguaje</p>
-      <a href="./pages/movie-list.html" class="sidebar-link" menu-close
+      <a href="./movie-list.html" class="sidebar-link" menu-close onclick='getMovieList("with_original_language=es", "Español")'
         >Español</a
       >
-      <a href="./pages/movie-list.html" class="sidebar-link" menu-close
+      <a href="./movie-list.html" class="sidebar-link" menu-close onclick='getMovieList("with_original_language=en", "Inglés")'
         >Inglés</a
       >
-      <a href="./pages/movie-list.html" class="sidebar-link" menu-close
+      <a href="./movie-list.html" class="sidebar-link" menu-close onclick='getMovieList("with_original_language=fr", "Francés")'
         >Francés</a
       >
     </div>
@@ -69,7 +51,7 @@ export const sidebar = () => {
 
       <img
         src="./assets/images/tmdb-logo.svg"
-        onerror="this.src='../assets/images/tmdb-logo.png'"
+        onerror="this.src='./assets/images/tmdb-logo.png'"
         width="130"
         alt="Logo de api de la pelicula"
       />
@@ -82,10 +64,10 @@ export const sidebar = () => {
       link.classList.add("sidebar-link"); //Le añade la clase sidebar-link
       link.setAttribute("href", "./movie-list.html"); //Le añade el atributo href con el valor de la url de la página de películas
       link.setAttribute("menu-close", ""); //Le añade el atributo menu-close
-      //   link.setAttribute(
-      //     "onclick",
-      //     `getMovieList("with_genres = ${genreId}", "${genreName}")`
-      //   ); //Le añade el atributo onclick con la función getMovieList y los parametros
+      link.setAttribute(
+        "onclick",
+        `getMovieList("with_genres=${genreId}", "${genreName}")`
+      ); //Le añade el atributo onclick con la función getMovieList y los parametros
       link.textContent = genreName; //Le añade el texto del género
       sidebarInner.querySelectorAll(".sidebar-list")[0].appendChild(link); //Selecciona todos los elementos con la clase sidebar-list y el primer elemento del array lo añade al sidebar-inner como hijo del primer elemento
     });

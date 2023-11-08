@@ -1,7 +1,8 @@
 "use strict";
 
 import { imageBaseURL, api_key, fetchDataFromServer } from "./api.js";
-import { createMovieCard } from "./movie-card2.js";
+import { createMovieCard } from "./movie-card.js";
+import { search } from "./search.js";
 import { sidebar } from "./sidebar.js";
 
 const movieId = window.localStorage.getItem("movieId");
@@ -89,7 +90,7 @@ fetchDataFromServer(
             <div class="meta-list">
               <div class="meta-item">
                 <img
-                  src="../assets/images/star.png"
+                  src="./assets/images/star.png"
                   width="20"
                   alt="Valoración"
                 />
@@ -174,3 +175,5 @@ const addSuggestedMovies = ({ results: movieList }, title) => {
 
   pageContent.appendChild(movieListElem); //Agrega el movie-list al page-content
 };
+
+search();

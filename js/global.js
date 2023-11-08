@@ -29,3 +29,8 @@ addEventOnElements(searchTogglers, "click", () => {
 const getMovieDetail = function (movieId) {
   window.localStorage.setItem("movieId", String(movieId)); //Almacena el id de la pelicula en el localStorage como string
 };
+
+const getMovieList = function (urlParam, genreName) {
+  window.localStorage.setItem("urlParam", urlParam); //Almacena el parametro de la url en el localStorage
+  window.localStorage.setItem("genreName", genreName); //Almacena el nombre del genero en el localStorage
+};

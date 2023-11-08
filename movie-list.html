@@ -11,19 +11,19 @@
       content="Twister-film es una aplicación de películas realizada por Gustavo Briceño."
     />
     <!-- Favicon-->
-    <link rel="shortcut icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="shortcut icon" type="image/svg+xml" href="./favicon.svg" />
     <!--Estilos-->
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <!--Scripts-->
-    <script src="../js/global.js" defer></script>
-    <script src="../js/detail.js" type="module" defer></script>
+    <script src="./js/global.js" defer></script>
+    <script src="./js/movie-list.js" type="module" defer></script>
   </head>
   <body>
     <!-- - #HEADER-->
     <header class="header">
-      <a href="../index.html" class="logo">
+      <a href="./index.html" class="logo">
         <img
-          src="../assets/images/logo.svg"
+          src="./assets/images/logo.svg"
           width="160"
           height="32"
           alt="Twister-film Home"
@@ -44,7 +44,7 @@
           />
 
           <img
-            src="../assets/images/search.png"
+            src="./assets/images/search.png"
             width="24"
             height="24"
             alt="imagen de buscar"
@@ -54,7 +54,7 @@
 
         <button class="search-btn" search-toggler>
           <img
-            src="../assets/images/close.png"
+            src="./assets/images/close.png"
             width="24"
             alt="Cerrar cuadro de búsqueda"
           />
@@ -63,7 +63,7 @@
 
       <button class="search-btn" search-toggler menu-close>
         <img
-          src="../assets/images/search.png"
+          src="./assets/images/search.png"
           width="24"
           height="24"
           alt="Abrir cuadro de búsqueda"
@@ -72,13 +72,13 @@
 
       <button class="menu-btn" menu-btn menu-toggler>
         <img
-          src="../assets/images/menu.png"
+          src="./assets/images/menu.png"
           class="menu"
           width="24"
           alt="Abrir menú"
         />
         <img
-          src="../assets/images/menu-close.png"
+          src="./assets/images/menu-close.png"
           class="close"
           width="24"
           alt="Cerrar menú"
@@ -87,11 +87,22 @@
     </header>
     <!-- - #HEADER END-->
 
-    <!-- - #SIDEBAR-->
-    <nav class="sidebar" sidebar></nav>
+    <!-- - #MAIN-->
+    <main>
+      <!-- - #SIDEBAR-->
+      <nav class="sidebar" sidebar></nav>
 
-    <div class="overlay" overlay menu-toggler></div>
+      <div class="overlay" overlay menu-toggler></div>
 
-    <article class="container" page-content></article>
+      <!-- - #SIDEBAR END-->
+
+      <article class="container" page-content>
+        <!-- - #MOVIE LIST-->
+      </article>
+
+      </div>
+    </main>
+
+    <!-- - #MAIN END-->
   </body>
 </html>

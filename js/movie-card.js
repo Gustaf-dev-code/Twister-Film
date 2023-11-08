@@ -39,7 +39,7 @@ export function createMovieCard(movie) {
 </div>
 
 <a
-  href="./pages/detail.html"
+  href="./detail.html"
   title="${title}"
   class="card-btn"
   onclick="getMovieDetail(${id})"
